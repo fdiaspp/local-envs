@@ -1,0 +1,6 @@
+#/bin/bash
+
+FILENAME=`echo $1 | awk -F'/' '{ print $NF }'`;
+echo $FILENAME;
+docker cp $1 flink-standalone:/opt/flink/$FILENAME;
+docker exec -it flink-standalone flink run -py /opt/flink/$FILENAME;
