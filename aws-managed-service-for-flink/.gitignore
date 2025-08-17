@@ -1,2 +1,4 @@
 log*
-.local_dev
+
+local_dev/*
+!local_dev/.gitkeep
