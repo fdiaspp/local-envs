@@ -1,0 +1,29 @@
+{
+    "family": "optic-${JOB_NAME}",
+    "containerDefinitions": [
+    {
+        "name": "application",
+        "image": "${IMAGE_URI}-task",
+        "cpu": 256,
+        "memory": 512,
+        "portMappings": [],
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+            "awslogs-group": "${LOG_GROUP}",
+            "awslogs-region": "${AWS_REGION}",
+            "awslogs-stream-prefix": "${JOB_NAME}",
+            "mode": "non-blocking",
+            "max-buffer-size": "1m"
+            },
+        "secrets": []        
+        }
+    }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "taskRoleArn": "${ROLE_ARN}",
+    "executionRoleArn": "${ROLE_ARN}",
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512"
+}

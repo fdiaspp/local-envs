@@ -1,7 +1,11 @@
+-r requirements.txt
+
 apache-beam==2.48.0
-apache-flink==1.20.0
-apache-flink-libraries==1.20.0
+apache-flink==1.18.1
+apache-flink-libraries==1.18.1
 avro-python3==1.10.2
+boto3==1.40.11
+botocore==1.40.11
 certifi==2025.8.3
 charset-normalizer==3.4.3
 cloudpickle==2.2.1
@@ -16,11 +20,12 @@ grpcio==1.74.0
 hdfs==2.7.3
 httplib2==0.22.0
 idna==3.10
+jmespath==1.0.1
 numpy==1.24.4
 objsize==0.6.1
 orjson==3.11.2
 pandas==2.3.1
-pemja==0.4.1
+pemja==0.3.0
 proto-plus==1.26.1
 protobuf==4.23.4
 py4j==0.10.9.7
@@ -32,8 +37,7 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 regex==2025.7.34
 requests==2.32.4
-ruamel.yaml==0.18.14
-ruamel.yaml.clib==0.2.12
+s3transfer==0.13.1
 six==1.17.0
 typing_extensions==4.14.1
 tzdata==2025.2
