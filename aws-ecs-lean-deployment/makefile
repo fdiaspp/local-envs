@@ -9,7 +9,7 @@ LOG_GROUP:=/ecs/$(JOB_NAME)-service
 ROLE_ARN:=...
 
 authenticate:
-	aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin ....dkr.ecr.us-west-2.amazonaws.com
+	aws ecr get-login-password --region $(AWS_REGION) | docker login --username AWS --password-stdin ....dkr.ecr.us-west-2.amazonaws.com
 
 build:
 	@IMAGE_TAG=$(shell date +"%Y%m%d%H%M%S"); \
